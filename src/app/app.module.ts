@@ -3,16 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CalendarModule } from './calendar/calendar.module';
+import { TaskService } from './tasks/task.service';
+// import { TasklistComponent } from './tasklist/tasklist.component';
+import { TasksModule } from './tasks/tasks.module';
+
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // TasklistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TasksModule,
+    CalendarModule,
+    // BrowserAnimationsModule,
+    
   ],
-  providers: [],
+  providers: [
+    TaskService
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
